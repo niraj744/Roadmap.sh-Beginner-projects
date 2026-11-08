@@ -1,23 +1,23 @@
-const { readdirSync, statSync } = require("fs");
-const input = process.argv[2];
-const filePath = input ? input : process.cwd();
+const { readdirSync } = require("fs");
+const path = require("path");
 
-const filesCouter = () => {
-  let folders = 0;
-  let files = 0;
+const input = process.argv[2];
+const filePath = input ? path.resolve(input) : process.cwd();
+
+const filesCounter = () => {
+  let obj = {};
   try {
-    const f = readdirSync(filePath);
-    for (const element of f) {
-      if (statSync(element).isDirectory()) {
-        folders++;
-      } else {
-        files++;
-      }
+    const f = readdirSync(filePath, { withFileTypes: true });
+    if (f.length > 0) {
+      obj.Folder = path.basename(f[0].parentPath);
+      obj.Path = f[0].parentPath;
+      obj.Files = f.filter((files) => files.isFile()).length;
+      obj.Folders = f.filter((files) => files.isDirectory()).length;
+      return obj;
     }
   } catch (err) {
-    console.error("Error reading directory:", err);
+    console.error(`Error: Could not read folder: ${input}`);
   }
-  return { folders, files };
 };
 
-console.log(filesCouter());
+console.log(filesCounter());
