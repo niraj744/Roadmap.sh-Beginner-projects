@@ -4,7 +4,7 @@ const path = require("node:path");
 const file = process.argv[2];
 if (!file) {
   console.log("error: please provide a file path");
-  process.exit(0);
+  process.exit(1);
 }
 
 const fileCounter = async () => {
@@ -19,7 +19,7 @@ const fileCounter = async () => {
     };
   } catch (err) {
     console.error(`error: could not read file: ${file}`);
-    process.exit(0);
+    process.exit(1);
   }
 };
 fileCounter().then((data) => console.log(data));
