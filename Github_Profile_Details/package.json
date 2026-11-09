@@ -1,0 +1,16 @@
+{
+  "name": "github_profile_details",
+  "version": "1.0.0",
+  "description": "",
+  "main": "github-profile.js",
+  "scripts": {
+    "start": "nodemon github-profile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
