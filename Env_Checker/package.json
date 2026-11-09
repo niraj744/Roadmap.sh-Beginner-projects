@@ -1,0 +1,16 @@
+{
+  "name": "env_checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "env-checker.js",
+  "scripts": {
+    "start": "nodemon env-checker.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
