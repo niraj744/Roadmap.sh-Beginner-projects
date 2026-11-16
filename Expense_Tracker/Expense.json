@@ -1,0 +1,16 @@
+{
+  "Expenses": [
+    {
+      "index": 1,
+      "description": "Tuition fee",
+      "amount": "$20",
+      "date": 1794847321440
+    },
+    {
+      "index": 2,
+      "description": "College fee",
+      "amount": "$20",
+      "date": 1794847363046
+    }
+  ]
+}

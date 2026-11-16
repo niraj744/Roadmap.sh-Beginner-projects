@@ -7,3 +7,4 @@ https://roadmap.sh/projects/nodejs-json-formatter
 https://roadmap.sh/projects/nodejs-env-checker
 https://roadmap.sh/projects/task-tracker
 https://roadmap.sh/projects/number-guessing-game
+https://roadmap.sh/projects/expense-tracker
